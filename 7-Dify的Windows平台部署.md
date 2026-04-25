@@ -62,7 +62,7 @@ Windows 本地部署 Dify，核心依赖只有两个：
 
 ![在终端中进入 Dify docker 目录的界面](images/7/7-4-1-1.png)
 
-也可以先关闭窗口，稍后自行重启。
+也可以关闭窗口，稍后自行重启。
 
 ### 2.4 首次启动 Docker Desktop
 
@@ -78,7 +78,7 @@ Windows 本地部署 Dify，核心依赖只有两个：
 
 ![再次执行 docker compose up -d 启动已有服务的界面](images/7/7-4-2-3.png)
 
-如无特殊需要，可以先不登录：
+如无特殊需要，可以不登录：
 
 ![Docker Desktop 跳过登录的界面](images/7/7-2-4-4.png)
 

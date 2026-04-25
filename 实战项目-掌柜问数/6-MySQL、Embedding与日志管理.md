@@ -72,7 +72,7 @@
 
 对应官方文档：https://huggingface.co/docs/text-embeddings-inference/index （英）
 
-放到当前项目里，可以先按下面这条链来理解：
+放到当前项目里，可以按下面这条链来理解：
 
 ```text
 BAAI/bge-large-zh-v1.5
@@ -556,7 +556,7 @@ async with xxx_mysql_client_manager.session_factory() as session:
 
 来得到一份新的异步会话对象。
 
-所以这里的 `session_factory` 可以理解成：**一个专门用来批量、统一、稳定地创建 `AsyncSession` 的工厂。**
+所以这里的 `session_factory` 可以看作：**一个专门用来批量、统一、稳定地创建 `AsyncSession` 的工厂。**
 
 #### 2.4.4 pool_size、pool_pre_ping、autoflush 参数配置说明
 
@@ -822,7 +822,7 @@ logger.add(...)
   -> 分别添加自己的日志输出规则
 ```
 
-这套日志能力的核心目标其实就是“可配置”。不是写死“永远打印到控制台”，也不是写死“永远输出到文件”，而是让用户通过配置文件决定到底要启用哪些输出通道。
+这套日志能力的核心目标就是“可配置”。不是写死“永远打印到控制台”，也不是写死“永远输出到文件”，而是让用户通过配置文件决定到底要启用哪些输出通道。
 
 #### 3.4.3 日志格式设计
 

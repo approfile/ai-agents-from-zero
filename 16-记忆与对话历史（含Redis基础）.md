@@ -196,7 +196,7 @@
 
 ### 4.1 本章应抓哪条主线
 
-如果你只想先知道本章“应该学哪条技术线”，可以先记这个结论：
+如果你只想先知道本章“应该学哪条技术线”，先记这个结论：
 
 - **课程案例主线**：`RunnableWithMessageHistory + BaseChatMessageHistory`
 - **官方当下更大的主线**：LangGraph short-term memory / persistence
@@ -223,7 +223,7 @@ LangChain 早期有一个比较有代表性的类，叫 `ConversationChain`。
 
 如果 `RunnableWithMessageHistory` 解决的是“历史读写时机”，那么 `BaseChatMessageHistory` 解决的就是：
 
-**历史到底存在哪里、怎么存。**它可以理解成“聊天消息历史的统一抽象接口”。
+**历史到底存在哪里、怎么存。**它可以看作“聊天消息历史的统一抽象接口”。
 
 不必先纠结源码细节，只要抓住这层分工：
 

@@ -95,14 +95,13 @@ python 案例与源码-2-LangChain框架/01-helloworld/LangChainV1.0.py
 
 这三项我把它简称为“**调用三件套**”。
 
-你可以把它们理解成“打电话”时必须知道的三件事：
+可以把它们看作“打电话”时必须知道的三件事：
 
 - **API Key**：相当于你的身份凭证
 - **模型名**：相当于你要找哪位专家
 - **Base URL**：相当于你拨打哪个号码
 
-没有 API Key，平台不知道你是谁；没有模型名，平台不知道你要调哪个模型；没有 Base URL，请求甚至不知道该发往哪里。  
-所以，本章后面的 HelloWorld 其实就是围绕这三件套展开。
+没有 API Key，平台不知道你是谁；没有模型名，平台不知道你要调哪个模型；没有 Base URL，请求甚至不知道该发往哪里。所以，本章后面的 HelloWorld 就是围绕这三件套展开。
 
 ### 2.2 常见平台一览
 
@@ -139,7 +138,7 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ### 3.2 手动安装最小依赖
 
-如果你只是想先跑通本章 HelloWorld，也可以先安装最小依赖集合。  
+如果你只是想先跑通本章 HelloWorld，也可以安装最小依赖集合。
 以本章案例为核心，建议至少安装：
 
 ```bash
