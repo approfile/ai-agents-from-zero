@@ -23,6 +23,8 @@ Coze 的 API 能力需要通过应用发布功能启用。
 
 这一步的意义和 Dify 很像：只有发布后的工作流，才适合作为外部系统依赖的稳定入口。
 
+---
+
 ## 2、先在平台里把关键信息拿全
 
 ### 2.1 API 调试入口
@@ -73,6 +75,8 @@ Coze 的 API 能力需要通过应用发布功能启用。
 
 ![Coze API Playground 中运行工作流请求的界面](images/5/5-2-5-1.png)
 
+---
+
 ## 3、看懂最小调用请求
 
 平台里看到的 curl 命令大致如下：
@@ -97,6 +101,8 @@ curl -X POST 'https://api.coze.cn/v1/workflow/stream_run' \
 - `parameters`：传给工作流的实际业务参数
 
 > **注意：** JSON 标准不支持注释，所以请求体里不要写 `# 说明文字` 这种内容。
+
+---
 
 ## 4、怎么看流式结果
 
@@ -123,6 +129,8 @@ curl -X POST 'https://api.coze.cn/v1/workflow/stream_run' \
 - **Done**：整次流式输出结束。
 
 > **可这样记：** 写代码时，重点关注 `Message` 和结束信号；`PING` 不是业务结果，只是说明连接还活着。
+
+---
 
 ## 5、用 Python 调用 Coze 工作流
 

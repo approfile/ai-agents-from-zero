@@ -171,6 +171,8 @@
 
 学完 `State Schema` 和 `input_schema / output_schema` 之后，State 的“字段长什么样”这一半就比较清楚了。接下来要补上的，就是另一半：**字段更新时到底怎么合并。** 这正是 Reducer 负责的事。
 
+---
+
 ## 3、State 的更新机制：Reducer（规约函数）
 
 这里把 Reducer 单独提成一个二级标题，不是说它脱离了 State，而是为了让结构更清楚。概念上它仍然属于 State，只是值得单独展开。可以把前后关系看作：
