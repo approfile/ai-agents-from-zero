@@ -297,6 +297,22 @@ async def validate(self, sql: str):
 
 `validate_sql` 写入 `error` 后，图结构要根据它决定下一步。
 
+```mermaid
+flowchart TD
+    A["generate_sql 生成 SQL"]
+    B["validate_sql 校验 SQL"]
+    C{"error 是否为空"}
+    D["run_sql 执行 SQL"]
+    E["correct_sql 根据错误修正 SQL"]
+    F["返回查询结果"]
+
+    A --> B --> C
+    C -->|"是，校验通过"| D --> F
+    C -->|"否，校验失败"| E --> B
+```
+
+这就是本章的核心闭环：不是一次生成就盲目执行，而是先校验；校验失败就把错误信息带回模型，让它基于真实错误修正 SQL。
+
 项目对应文件路径：`shopkeeper-agent/app/agent/graph.py`
 
 ```python
