@@ -23,7 +23,7 @@ load_dotenv(encoding="utf-8")
 # 这里走的是阿里云原生集成，不是 OpenAI 兼容接口路线，因此不需要手动填写 base_url。
 chat_llm = ChatTongyi(
     model="qwen-plus",
-    api_key=os.getenv("aliQwen-api"),
+    api_key=os.getenv("QWEN_API_KEY"),  # 或 os.getenv("aliQwen-api")
     streaming=True,
 )
 

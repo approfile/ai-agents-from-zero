@@ -22,7 +22,7 @@ load_dotenv(encoding="utf-8")
 # 这里选择 qwen-plus + 阿里百炼兼容端点，目的是演示“如何把兼容接口接进 LangChain 模型对象”。
 chat_llm = ChatOpenAI(
     model="qwen-plus",  # 可按需更换，模型列表见阿里云文档
-    api_key=os.getenv("aliQwen-api"),  # 或 os.getenv("QWEN_API_KEY")
+    api_key=os.getenv("QWEN_API_KEY"),  # 或 os.getenv("QWEN_API_KEY")
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
 )
 
@@ -35,4 +35,4 @@ messages = [
 
 response = chat_llm.invoke(messages)
 # 返回值是 AIMessage；若你要看 token 用量、finish_reason、模型名等，可继续查看 response.response_metadata。
-print(response.content)
+print(response.response_metadata)  # 包含 token 用量、finish_reason、模型名等
