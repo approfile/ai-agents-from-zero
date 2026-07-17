@@ -35,7 +35,7 @@ def demo_message_objects():
     ]
     resp = model.invoke(messages)
     print(type(resp), resp.content[:80] if resp.content else "")
-
+    
 
 def demo_tuple_list():
     """元组列表：与 ChatPromptTemplate.from_messages 的写法一致。"""

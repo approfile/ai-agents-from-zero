@@ -20,10 +20,10 @@ load_dotenv()
 # ---------- 1. 实例化聊天模型 ----------
 # init_chat_model 会根据 model_provider 等参数创建「聊天模型」对象，后续用 invoke/stream/batch 调用
 model = init_chat_model(
-    model="qwen-plus",
+    model="deepseek-v4-flash",
     model_provider="openai",
-    api_key=os.getenv("aliQwen-api"),
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    api_key=os.getenv("deepseek-api"),
+    base_url="https://api.deepseek.com",
 )
 
 # ---------- 2. 构建多角色消息列表（即本次请求的 Prompt）----------
