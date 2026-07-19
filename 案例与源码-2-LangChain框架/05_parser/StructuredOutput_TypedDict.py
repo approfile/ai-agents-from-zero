@@ -26,7 +26,7 @@ llm = init_chat_model(
     model="qwen-plus",
     model_provider="openai",
     api_key=os.getenv("aliQwen-api"),
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    base_url="https://llm-k4sy3cngl6506a79.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
 )
 
 
