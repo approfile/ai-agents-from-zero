@@ -31,7 +31,7 @@ model = init_chat_model(
 # 子链 1：中文简短介绍
 prompt1 = ChatPromptTemplate.from_messages(
     [
-        ("system", "你是一个知识渊博的计算机专家，请用中文简短回答"),
+        ("system", "你是一个知识渊博的计算机专家，请用韩语简短回答"),
         ("human", "请简短介绍什么是{topic}"),
     ]
 )
@@ -49,7 +49,7 @@ parser2 = StrOutputParser()
 chain2 = prompt2 | model | parser2
 
 # RunnableParallel：同一输入会同时喂给多个子链，结果按键汇总为 dict
-parallel_chain = RunnableParallel({"chinese": chain1, "english": chain2})
+parallel_chain = RunnableParallel({"korean": chain1, "english": chain2})
 
 # 一次 invoke，返回 {"chinese": "...", "english": "..."}
 result = parallel_chain.invoke({"topic": "langchain"})
