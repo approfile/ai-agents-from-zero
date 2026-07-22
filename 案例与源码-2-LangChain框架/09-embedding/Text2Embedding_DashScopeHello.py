@@ -18,7 +18,7 @@ from http import HTTPStatus
 from dotenv import load_dotenv
 
 load_dotenv()
-dashscope.api_key = os.getenv("aliQwen-api")
+dashscope.api_key = os.getenv("deepseek-api")
 
 # 待向量化的单句文本
 input_text = "衣服的质量杠杠的"

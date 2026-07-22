@@ -51,7 +51,7 @@ output_chain = output_prompt | llm | output_parser
 # 完整链：先拿到天气 JSON，再包装成 {"weather_json": x} 送入输出链，得到最终中文描述
 full_chain = get_weather_chain | (lambda x: {"weather_json": x}) | output_chain
 
-result = full_chain.invoke("请问北京今天的天气如何？")
+result = full_chain.invoke("请问伦敦今天的天气如何？")
 logger.info(result)
 
 """

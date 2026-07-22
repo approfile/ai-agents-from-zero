@@ -56,7 +56,7 @@ def get_weather(loc: str) -> str:
 
 # 本地测试：单参数工具可直接传值；若和更通用的工具调用风格保持一致，也可传 {"loc": "..."}
 # result = get_weather.invoke("shanghai")
-result = get_weather.invoke("beijing")
+result = get_weather.invoke("London")
 print(result)
 
 """

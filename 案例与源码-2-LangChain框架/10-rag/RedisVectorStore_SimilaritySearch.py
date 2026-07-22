@@ -34,6 +34,7 @@ vector_store = RedisVectorStore(
 query = "我喜欢用什么手机"
 results = vector_store.similarity_search_with_score(query, k=3)
 
+
 print("=== 查询结果 ===")
 for i, (doc, score) in enumerate(results, 1):
     # 这里把“距离”近似换算成“相似度”只是为了展示更直观；工程里请以具体返回定义为准
