@@ -81,7 +81,7 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 # 一次问题触发多工具调用（北京、上海天气）并聚合回答
 result = agent_executor.invoke(
-    {"input": "请问今天北京和上海的天气怎么样，哪个城市更热？"}
+    {"input": "请问今天上海和杭州的天气怎么样，哪个城市更热？"}
 )
 
 print(result)

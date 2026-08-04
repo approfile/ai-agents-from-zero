@@ -26,16 +26,22 @@ def subtraction(state):
     print(f"减法节点收到的初始值:{state}")
     return {"x": state["x"] - 2}
 
+def chengfa(state):
+    """乘法节点：将 state 中的 x 乘 2. """
+    print(f"乘法节点收到的初始值：{state}")
+    return {"x": state["x"]*2}
 
 # 使用 dict 作为状态类型，无需预定义 TypedDict
 graph = StateGraph(dict)
 graph.add_node("addition", addition)
 graph.add_node("subtraction", subtraction)
+graph.add_node("chengfa", chengfa)
 
-# 定义执行顺序：START → addition → subtraction → END
+# 定义执行顺序：START → addition → subtraction → chengfa → END
 graph.add_edge(START, "addition")
 graph.add_edge("addition", "subtraction")
-graph.add_edge("subtraction", END)
+graph.add_edge("subtraction", "chengfa")
+graph.add_edge("chengfa", END)
 
 # 查看图的边与节点（调试用）
 print(graph.edges)
